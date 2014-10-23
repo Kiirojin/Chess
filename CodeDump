@@ -1,0 +1,128 @@
+
+		if(pieceToCheck instanceof Pawn)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackPawn.png"));
+			else
+				return ImageIO.read(new File("Images\\WhitePawn.png"));
+		}
+		else if(pieceToCheck instanceof Rook)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackRook.png"));
+			else
+				return ImageIO.read(new File("Images\\WhiteRook.png"));
+		}
+		else if(pieceToCheck instanceof Knight)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackKnight.png"));
+			else
+				return ImageIO.read(new File("Images\\WhiteKnight.png"));
+		}
+		else if(pieceToCheck instanceof Bishop)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackBishop.png"));
+			else
+				return ImageIO.read(new File("Images\\WhiteBishop.png"));
+		}
+		else if(pieceToCheck instanceof Queen)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackQueen.png"));
+			else
+				return ImageIO.read(new File("Images\\WhiteQueen.png"));
+		}
+		else if(pieceToCheck instanceof King)
+		{
+			if(pieceToCheck.getColor().equals(Color.black))
+				return ImageIO.read(new File("Images\\BlackKing.png"));
+			else
+				return ImageIO.read(new File("Images\\WhiteKing.png"));
+		}
+		else 
+		{
+			return null;
+		}
+
+		public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Board gameBoard = new Board();
+		Player playerWhite = new Player(Color.white, gameBoard);
+		Player playerBlack = new Player(Color.black, gameBoard);
+		playerWhite.move(6, 6, 6, 4);
+		playerBlack.move(4, 1, 4, 3);
+		
+		JFrame graphicsWindow = new JFrame();
+		graphicsWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		graphicsWindow.setVisible(true);
+		graphicsWindow.setLayout(new GridLayout(gameBoard.getWidth(),gameBoard.getHeight()));
+	
+		for(int yIndex = 0; yIndex < gameBoard.getHeight(); yIndex++)
+		{
+			for(int xIndex = 0; xIndex < gameBoard.getWidth(); xIndex++)	
+			{
+				ImageIcon pieceIcon;
+				BufferedImage pieceImage = getImage(xIndex, yIndex, gameBoard);
+				if(pieceImage != null)
+					pieceIcon = new ImageIcon(getImage(xIndex, yIndex, gameBoard));
+				else 
+					pieceIcon = new ImageIcon();
+				if(xIndex%2 != yIndex%2)
+				{
+					JPanel square = new JPanel();
+					square.setBackground(new Color(215, 149, 91));
+					square.add(new JLabel(pieceIcon));
+					graphicsWindow.add(square);
+				}
+				else
+				{
+					JPanel square = new JPanel();
+					square.setBackground(new Color(255, 212, 173));
+					square.add(new JLabel(pieceIcon));
+					graphicsWindow.add(square);
+				}
+			}
+		}
+		graphicsWindow.pack();
+		//graphicsWindow.setVisible(true);
+			if(gameBoard.getPiece((int) location.getX(), (int)location.getY()) != null)
+			System.out.println(gameBoard.getPiece((int) location.getX(), (int)location.getY()).toString());
+		Piece firstPiece = getPieceAtClick(mouse.getX(), mouse.getY());
+	}
+	
+	if(pieceAtFirstClick.validMove((int)location.getX(), (int) location.getY(), gameBoard) == true);
+			{
+				
+				System.out.println(pieceAtFirstClick.toString()+" is going from " + (int) firstPress.getX() +","+(int) firstPress.getY()
+						+ " to " +(int)location.getX() + "," +(int) location.getY());
+				gameBoard.movePiece((int)firstPress.getX(), (int)firstPress.getY(), (int)location.getX(), (int)location.getY());
+			}
+			
+	private Piece getPieceAtClick(int xLocation, int yLocation) {
+		int startXLocation = 8;
+		int startYLocation = 31;
+		int squareSize = 70;
+		int xIndex = (xLocation-startXLocation)/squareSize;
+		int yIndex = (yLocation-startYLocation)/squareSize;
+		return gameBoard.getPiece(xIndex, yIndex);
+	}
+	
+	
+	public void mouseClicked(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	

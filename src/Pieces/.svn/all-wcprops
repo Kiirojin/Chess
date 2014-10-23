@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces
+END
+Piece.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Piece.java
+END
+Bishop.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Bishop.java
+END
+Knight.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Knight.java
+END
+Queen.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Queen.java
+END
+Rook.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Rook.java
+END
+Pawn.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Pawn.java
+END
+King.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/King.java
+END
+Camel.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/Camel.java
+END
+ArchBishop.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/sp14-cs242/!svn/ver/6002/anguyn10/Assignment1.2/src/Pieces/ArchBishop.java
+END
